@@ -2,7 +2,8 @@
 <p>image</p><p>name</p>
 <% @users.each do |user| %>
 <div>
-    <p><%= profile_image_tag('sample-author1.jpg') %>
+    <p><%= user.profile_image_id('sample-author1.jpg') %>
     <p><%= user.name %></p>
     <p><%= link_to "Show", user_path(user.id) %></p>
 </div>
+<% end %>
