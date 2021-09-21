@@ -1,16 +1,17 @@
 <h2>Uaer info</h2>
-<%= image_tag('sample-author1.jpg') %>
-<div>
+
+  <%= image_tag('sample-author1.jpg') %>
+  <div>
     <P>name</P>
     <%= @user.name %>
-</div>
-<div>
+  </div>
+  <div>
     <p>introduction</p>
     <%= @user.introduction %>
-</div>
-<% if @user.id == current_user.id %>
-  <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
-<% end %>
+  </div>
+  <% if @user.id == current_user.id %>
+    <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+  <% end %>
 
 
 <h2>Books</h2>
