@@ -1,13 +1,12 @@
 <h2>Uaer info</h2>
-
-  <%= image_tag('sample-author1.jpg') %>
+  <%= attachment_image_tag @user, :profile_image_id %>
   <div>
     <P>name</P>
     <%= @user.name %>
   </div>
   <div>
     <p>introduction</p>
-    <%= @user.introduction %>
+    <%= @user.intoroduction %>
   </div>
   <% if @user.id == current_user.id %>
     <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
@@ -20,6 +19,7 @@
   <p>Title</p><p>Opinion</p>
 </div>
 <div>
+  <%= attachment_image_tag @user, :profile_image_id %>
   <%= book.title %>
   <%= book.body %>
 </div>
