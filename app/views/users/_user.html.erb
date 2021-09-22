@@ -17,7 +17,8 @@
 
         <div class="row">
           <% if user.id == current_user.id %>
-          <a class="btn btn-block btn-outline-secondary fas fa-user-cog"><%= link_to "", edit_user_path(@user) %></a>
+          <%= link_to "", edit_user_path(user), class: "btn btn-outline-secondary btn-block fas fa-user-cog" %>
+
           <% end %>
         </div>
 
