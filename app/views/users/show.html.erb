@@ -1,34 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
-      <h2>Uaer info</h2>
-        <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
-      <div>
-        <P>name</P>
-        <%= @user.name %>
-      </div>
-      <div>
-        <p>intrduction</p>
-        <%= @user.introduction %>
-      </div>
-      <% if @user.id == current_user.id %>
-      <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
-      <% end %>
-
-      <h2>New book</h2>
-      <%= form_with model: @book, local:true do |f| %>
-        <p>Title</p>
-        <%= f.text_field :title %>
-
-        <p>Opinion</p>
-        <%= f.text_field :body %>
-
-        <%= f.submit 'Create Book' %>
-      <% end %>
-
-
-
-    </div>
+    <%= render 'users/user', book:@book, user:@user %>
 
 
       <div class="col-8 offset-md-1">
