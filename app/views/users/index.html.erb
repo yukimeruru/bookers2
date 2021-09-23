@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-    
+    <%= render 'users/list',user:@user %>
 
     <h2>New book</h2>
       <%= form_with model: @book, local:true do |f| %>
@@ -12,7 +12,7 @@
         <p>Opinion</p>
         <%= f.text_area :body %>
 
-        <p><input type="submit" value="Create Book" class="btn btn-success " data-disable-with="Create Book"></p>
+        <%= f.submit "Create Book", class: "btn btn-success" %>
       <% end %>
     </div>
 
